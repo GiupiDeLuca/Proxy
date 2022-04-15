@@ -14,7 +14,8 @@
     },
     {
       "stateMutability": "payable",
-      "type": "fallback"
+      "type": "fallback",
+      "payable": true
     },
     {
       "inputs": [],
@@ -27,7 +28,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -40,7 +42,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -53,7 +56,13 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive",
+      "payable": true
     },
     {
       "inputs": [
@@ -69,9 +78,9 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_currentAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"_initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newAddress\",\"type\":\"address\"}],\"name\":\"upgrade\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Proxy.sol\":\"Proxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Proxy.sol\":{\"keccak256\":\"0x638829c18aba870ec38658a530b044843410d04be37a20011df612219075265a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ebc7a35d1b31649472c13d2fa3de6e0b3cb023c75464317faf81ec84ec00959\",\"dweb:/ipfs/QmY1uzhbMKayzDTrFSqt38Bz7bDCW9aSF27vfRanLgEex2\"]},\"project:/contracts/Storage.sol\":{\"keccak256\":\"0xcc380e47aa543f491187e1eab56eefa39a828c8dc9e1bbd544c5426eb82d01c5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c0c26fe0fc9822336908f634b134c8deb273920b163dc3b887aab4e501ba3552\",\"dweb:/ipfs/QmePWwTPrJbtzGRDzUFgXRpNUfy7QNmZtPs7V6ZJHGH5gu\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516104a23803806104a28339818101604052810190610032919061008e565b80600660006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610100565b600081519050610088816100e9565b92915050565b6000602082840312156100a057600080fd5b60006100ae84828501610079565b91505092915050565b60006100c2826100c9565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6100f2816100b7565b81146100fd57600080fd5b50565b6103938061010f6000396000f3fe6080604052600436106100435760003560e01c80630900f010146101295780633072cf601461015257806381bf47181461017d5780638da5cb5b146101a857610044565b5b6000600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100a557600080fd5b600080368080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509050600080825160208401855af43d604051816000823e8260008114610119576001811461011d57610121565b8282fd5b8282f35b505050505050005b34801561013557600080fd5b50610150600480360381019061014b919061028b565b6101d3565b005b34801561015e57600080fd5b50610167610217565b60405161017491906102ed565b60405180910390f35b34801561018957600080fd5b5061019261022a565b60405161019f91906102d2565b60405180910390f35b3480156101b457600080fd5b506101bd610250565b6040516101ca91906102d2565b60405180910390f35b80600660006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600560149054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008135905061028581610346565b92915050565b60006020828403121561029d57600080fd5b60006102ab84828501610276565b91505092915050565b6102bd81610308565b82525050565b6102cc8161031a565b82525050565b60006020820190506102e760008301846102b4565b92915050565b600060208201905061030260008301846102c3565b92915050565b600061031382610326565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b61034f81610308565b811461035a57600080fd5b5056fea264697066735822122025878e2529672aac1c99b605c102921657ddb783e9174fe2432b926b3ebf5a9b64736f6c63430008000033",
-  "deployedBytecode": "0x6080604052600436106100435760003560e01c80630900f010146101295780633072cf601461015257806381bf47181461017d5780638da5cb5b146101a857610044565b5b6000600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100a557600080fd5b600080368080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509050600080825160208401855af43d604051816000823e8260008114610119576001811461011d57610121565b8282fd5b8282f35b505050505050005b34801561013557600080fd5b50610150600480360381019061014b919061028b565b6101d3565b005b34801561015e57600080fd5b50610167610217565b60405161017491906102ed565b60405180910390f35b34801561018957600080fd5b5061019261022a565b60405161019f91906102d2565b60405180910390f35b3480156101b457600080fd5b506101bd610250565b6040516101ca91906102d2565b60405180910390f35b80600660006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600560149054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008135905061028581610346565b92915050565b60006020828403121561029d57600080fd5b60006102ab84828501610276565b91505092915050565b6102bd81610308565b82525050565b6102cc8161031a565b82525050565b60006020820190506102e760008301846102b4565b92915050565b600060208201905061030260008301846102c3565b92915050565b600061031382610326565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b61034f81610308565b811461035a57600080fd5b5056fea264697066735822122025878e2529672aac1c99b605c102921657ddb783e9174fe2432b926b3ebf5a9b64736f6c63430008000033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_currentAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"_initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newAddress\",\"type\":\"address\"}],\"name\":\"upgrade\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Proxy.sol\":\"Proxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Proxy.sol\":{\"keccak256\":\"0xb3a6173b3d6f921ef7c5ec77a4595d9014459816f358dce080dfe946c6c2418a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ab2723f1e33d5154131c495e6f39d6274c6cb2944cc6fd7379c288998234723f\",\"dweb:/ipfs/QmNu1fqk8ax3G7PWFSLzTNXHe4KGcUxo5tp84KFdMT7kHt\"]},\"project:/contracts/Storage.sol\":{\"keccak256\":\"0xcc380e47aa543f491187e1eab56eefa39a828c8dc9e1bbd544c5426eb82d01c5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c0c26fe0fc9822336908f634b134c8deb273920b163dc3b887aab4e501ba3552\",\"dweb:/ipfs/QmePWwTPrJbtzGRDzUFgXRpNUfy7QNmZtPs7V6ZJHGH5gu\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516104a83803806104a88339818101604052810190610032919061008e565b80600660006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610100565b600081519050610088816100e9565b92915050565b6000602082840312156100a057600080fd5b60006100ae84828501610079565b91505092915050565b60006100c2826100c9565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6100f2816100b7565b81146100fd57600080fd5b50565b6103998061010f6000396000f3fe6080604052600436106100435760003560e01c80630900f0101461012f5780633072cf601461015857806381bf4718146101835780638da5cb5b146101ae5761004a565b3661004a57005b6000600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100ab57600080fd5b600080368080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509050600080825160208401855af43d604051816000823e826000811461011f576001811461012357610127565b8282fd5b8282f35b505050505050005b34801561013b57600080fd5b5061015660048036038101906101519190610291565b6101d9565b005b34801561016457600080fd5b5061016d61021d565b60405161017a91906102f3565b60405180910390f35b34801561018f57600080fd5b50610198610230565b6040516101a591906102d8565b60405180910390f35b3480156101ba57600080fd5b506101c3610256565b6040516101d091906102d8565b60405180910390f35b80600660006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600560149054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008135905061028b8161034c565b92915050565b6000602082840312156102a357600080fd5b60006102b18482850161027c565b91505092915050565b6102c38161030e565b82525050565b6102d281610320565b82525050565b60006020820190506102ed60008301846102ba565b92915050565b600060208201905061030860008301846102c9565b92915050565b60006103198261032c565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6103558161030e565b811461036057600080fd5b5056fea2646970667358221220f78a4c329d3b282bb4b6d79d74d0d27f09f18a7c29e477191cc8daf28ef4fea264736f6c63430008000033",
+  "deployedBytecode": "0x6080604052600436106100435760003560e01c80630900f0101461012f5780633072cf601461015857806381bf4718146101835780638da5cb5b146101ae5761004a565b3661004a57005b6000600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100ab57600080fd5b600080368080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509050600080825160208401855af43d604051816000823e826000811461011f576001811461012357610127565b8282fd5b8282f35b505050505050005b34801561013b57600080fd5b5061015660048036038101906101519190610291565b6101d9565b005b34801561016457600080fd5b5061016d61021d565b60405161017a91906102f3565b60405180910390f35b34801561018f57600080fd5b50610198610230565b6040516101a591906102d8565b60405180910390f35b3480156101ba57600080fd5b506101c3610256565b6040516101d091906102d8565b60405180910390f35b80600660006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600560149054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008135905061028b8161034c565b92915050565b6000602082840312156102a357600080fd5b60006102b18482850161027c565b91505092915050565b6102c38161030e565b82525050565b6102d281610320565b82525050565b60006020820190506102ed60008301846102ba565b92915050565b600060208201905061030860008301846102c9565b92915050565b60006103198261032c565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6103558161030e565b811461036057600080fd5b5056fea2646970667358221220f78a4c329d3b282bb4b6d79d74d0d27f09f18a7c29e477191cc8daf28ef4fea264736f6c63430008000033",
   "immutableReferences": {},
   "generatedSources": [
     {
@@ -1468,21 +1477,21 @@
       "name": "#utility.yul"
     }
   ],
-  "sourceMap": "103:695:0:-:0;;;164:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;224:15;207:14;;:32;;;;;;;;;;;;;;;;;;164:78;103:695;;7:143:2;;95:6;89:13;80:22;;111:33;138:5;111:33;:::i;:::-;70:80;;;;:::o;156:284::-;;275:2;263:9;254:7;250:23;246:32;243:2;;;291:1;288;281:12;243:2;334:1;359:64;415:7;406:6;395:9;391:22;359:64;:::i;:::-;349:74;;305:128;233:207;;;;:::o;446:96::-;;512:24;530:5;512:24;:::i;:::-;501:35;;491:51;;;:::o;548:126::-;;625:42;618:5;614:54;603:65;;593:81;;;:::o;680:122::-;753:24;771:5;753:24;:::i;:::-;746:5;743:35;733:2;;792:1;789;782:12;733:2;723:79;:::o;103:695:0:-;;;;;;;",
-  "deployedSourceMap": "103:695:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:22;387:14;;;;;;;;;;;362:39;;441:1;415:28;;:14;:28;;;;407:37;;;;;;450:17;470:8;;450:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;587:1;584;577:4;571:11;564:4;558;554:15;538:14;531:5;518:71;610:16;652:4;646:11;690:4;687:1;682:3;667:28;711:6;731:1;726:26;;;;766:1;761:26;;;;704:83;;726:26;746:4;741:3;734:17;761:26;781:4;776:3;769:17;704:83;;494:299;;;;;103:695;244:82;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;357:24:1;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;132:29:0;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;331:20:1;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;244:82:0;312:11;295:14;;:28;;;;;;;;;;;;;;;;;;244:82;:::o;357:24:1:-;;;;;;;;;;;;;:::o;132:29:0:-;;;;;;;;;;;;;:::o;331:20:1:-;;;;;;;;;;;;;:::o;7:139:2:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:262::-;;260:2;248:9;239:7;235:23;231:32;228:2;;;276:1;273;266:12;228:2;319:1;344:53;389:7;380:6;369:9;365:22;344:53;:::i;:::-;334:63;;290:117;218:196;;;;:::o;420:118::-;507:24;525:5;507:24;:::i;:::-;502:3;495:37;485:53;;:::o;544:109::-;625:21;640:5;625:21;:::i;:::-;620:3;613:34;603:50;;:::o;659:222::-;;790:2;779:9;775:18;767:26;;803:71;871:1;860:9;856:17;847:6;803:71;:::i;:::-;757:124;;;;:::o;887:210::-;;1012:2;1001:9;997:18;989:26;;1025:65;1087:1;1076:9;1072:17;1063:6;1025:65;:::i;:::-;979:118;;;;:::o;1103:96::-;;1169:24;1187:5;1169:24;:::i;:::-;1158:35;;1148:51;;;:::o;1205:90::-;;1282:5;1275:13;1268:21;1257:32;;1247:48;;;:::o;1301:126::-;;1378:42;1371:5;1367:54;1356:65;;1346:81;;;:::o;1433:122::-;1506:24;1524:5;1506:24;:::i;:::-;1499:5;1496:35;1486:2;;1545:1;1542;1535:12;1486:2;1476:79;:::o",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^ 0.8.0;\npragma abicoder v2;\n\nimport \"./Storage.sol\";\n\ncontract Proxy is Storage {\n\naddress public currentAddress;\n\nconstructor(address _currentAddress) {\n    currentAddress = _currentAddress;\n}\n\nfunction upgrade(address _newAddress) public {\n    currentAddress = _newAddress;\n}\n\nfallback() payable external {\n    address implementation = currentAddress;\n    require(implementation != address(0));\n    bytes memory data = msg.data;\n\n    assembly {\n        let result := delegatecall(gas(), implementation, add(data, 0x20), mload(data), 0, 0)\n        let size := returndatasize()\n        let ptr := mload(0x40)\n\n        returndatacopy(ptr, 0, size)\n        switch result\n        case 0 {revert(ptr, size)}\n        case 1 {return(ptr, size)}\n    }\n}\n\n}",
+  "sourceMap": "103:726:0:-:0;;;164:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;224:15;207:14;;:32;;;;;;;;;;;;;;;;;;164:78;103:726;;7:143:2;;95:6;89:13;80:22;;111:33;138:5;111:33;:::i;:::-;70:80;;;;:::o;156:284::-;;275:2;263:9;254:7;250:23;246:32;243:2;;;291:1;288;281:12;243:2;334:1;359:64;415:7;406:6;395:9;391:22;359:64;:::i;:::-;349:74;;305:128;233:207;;;;:::o;446:96::-;;512:24;530:5;512:24;:::i;:::-;501:35;;491:51;;;:::o;548:126::-;;625:42;618:5;614:54;603:65;;593:81;;;:::o;680:122::-;753:24;771:5;753:24;:::i;:::-;746:5;743:35;733:2;;792:1;789;782:12;733:2;723:79;:::o;103:726:0:-;;;;;;;",
+  "deployedSourceMap": "103:726:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:22;387:14;;;;;;;;;;;362:39;;441:1;415:28;;:14;:28;;;;407:37;;;;;;450:17;470:8;;450:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;587:1;584;577:4;571:11;564:4;558;554:15;538:14;531:5;518:71;610:16;652:4;646:11;690:4;687:1;682:3;667:28;711:6;731:1;726:26;;;;766:1;761:26;;;;704:83;;726:26;746:4;741:3;734:17;761:26;781:4;776:3;769:17;704:83;;494:299;;;;;103:726;244:82;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;357:24:1;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;132:29:0;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;331:20:1;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;244:82:0;312:11;295:14;;:28;;;;;;;;;;;;;;;;;;244:82;:::o;357:24:1:-;;;;;;;;;;;;;:::o;132:29:0:-;;;;;;;;;;;;;:::o;331:20:1:-;;;;;;;;;;;;;:::o;7:139:2:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:262::-;;260:2;248:9;239:7;235:23;231:32;228:2;;;276:1;273;266:12;228:2;319:1;344:53;389:7;380:6;369:9;365:22;344:53;:::i;:::-;334:63;;290:117;218:196;;;;:::o;420:118::-;507:24;525:5;507:24;:::i;:::-;502:3;495:37;485:53;;:::o;544:109::-;625:21;640:5;625:21;:::i;:::-;620:3;613:34;603:50;;:::o;659:222::-;;790:2;779:9;775:18;767:26;;803:71;871:1;860:9;856:17;847:6;803:71;:::i;:::-;757:124;;;;:::o;887:210::-;;1012:2;1001:9;997:18;989:26;;1025:65;1087:1;1076:9;1072:17;1063:6;1025:65;:::i;:::-;979:118;;;;:::o;1103:96::-;;1169:24;1187:5;1169:24;:::i;:::-;1158:35;;1148:51;;;:::o;1205:90::-;;1282:5;1275:13;1268:21;1257:32;;1247:48;;;:::o;1301:126::-;;1378:42;1371:5;1367:54;1356:65;;1346:81;;;:::o;1433:122::-;1506:24;1524:5;1506:24;:::i;:::-;1499:5;1496:35;1486:2;;1545:1;1542;1535:12;1486:2;1476:79;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^ 0.8.0;\npragma abicoder v2;\n\nimport \"./Storage.sol\";\n\ncontract Proxy is Storage {\n\naddress public currentAddress;\n\nconstructor(address _currentAddress) {\n    currentAddress = _currentAddress;\n}\n\nfunction upgrade(address _newAddress) public {\n    currentAddress = _newAddress;\n}\n\nfallback() payable external {\n    address implementation = currentAddress;\n    require(implementation != address(0));\n    bytes memory data = msg.data;\n\n    assembly {\n        let result := delegatecall(gas(), implementation, add(data, 0x20), mload(data), 0, 0)\n        let size := returndatasize()\n        let ptr := mload(0x40)\n\n        returndatacopy(ptr, 0, size)\n        switch result\n        case 0 {revert(ptr, size)}\n        case 1 {return(ptr, size)}\n    }\n}\n\nreceive() payable external {}\n\n}",
   "sourcePath": "/Users/giuseppe/Desktop/Ethereum/Proxy/contracts/Proxy.sol",
   "ast": {
     "absolutePath": "project:/contracts/Proxy.sol",
     "exportedSymbols": {
       "Proxy": [
-        51
+        55
       ],
       "Storage": [
-        79
+        83
       ]
     },
-    "id": 52,
+    "id": 56,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
@@ -1511,8 +1520,8 @@
         "file": "./Storage.sol",
         "id": 3,
         "nodeType": "ImportDirective",
-        "scope": 52,
-        "sourceUnit": 80,
+        "scope": 56,
+        "sourceUnit": 84,
         "src": "78:23:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1525,7 +1534,7 @@
               "id": 4,
               "name": "Storage",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 79,
+              "referencedDeclaration": 83,
               "src": "121:7:0"
             },
             "id": 5,
@@ -1534,14 +1543,14 @@
           }
         ],
         "contractDependencies": [
-          79
+          83
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 51,
+        "id": 55,
         "linearizedBaseContracts": [
-          51,
-          79
+          55,
+          83
         ],
         "name": "Proxy",
         "nodeType": "ContractDefinition",
@@ -1553,7 +1562,7 @@
             "mutability": "mutable",
             "name": "currentAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 51,
+            "scope": 55,
             "src": "132:29:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1671,7 +1680,7 @@
               "parameters": [],
               "src": "201:0:0"
             },
-            "scope": 51,
+            "scope": 55,
             "src": "164:78:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -1775,7 +1784,7 @@
               "parameters": [],
               "src": "289:0:0"
             },
-            "scope": 51,
+            "scope": 55,
             "src": "244:82:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2357,30 +2366,61 @@
               "parameters": [],
               "src": "356:0:0"
             },
-            "scope": 51,
+            "scope": 55,
             "src": "328:467:0",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 53,
+              "nodeType": "Block",
+              "src": "824:2:0",
+              "statements": []
+            },
+            "id": 54,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "804:2:0"
+            },
+            "returnParameters": {
+              "id": 52,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "824:0:0"
+            },
+            "scope": 55,
+            "src": "797:29:0",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 52,
-        "src": "103:695:0"
+        "scope": 56,
+        "src": "103:726:0"
       }
     ],
-    "src": "32:766:0"
+    "src": "32:797:0"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/Proxy.sol",
     "exportedSymbols": {
       "Proxy": [
-        51
+        55
       ],
       "Storage": [
-        79
+        83
       ]
     },
-    "id": 52,
+    "id": 56,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
@@ -2409,8 +2449,8 @@
         "file": "./Storage.sol",
         "id": 3,
         "nodeType": "ImportDirective",
-        "scope": 52,
-        "sourceUnit": 80,
+        "scope": 56,
+        "sourceUnit": 84,
         "src": "78:23:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2423,7 +2463,7 @@
               "id": 4,
               "name": "Storage",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 79,
+              "referencedDeclaration": 83,
               "src": "121:7:0"
             },
             "id": 5,
@@ -2432,14 +2472,14 @@
           }
         ],
         "contractDependencies": [
-          79
+          83
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 51,
+        "id": 55,
         "linearizedBaseContracts": [
-          51,
-          79
+          55,
+          83
         ],
         "name": "Proxy",
         "nodeType": "ContractDefinition",
@@ -2451,7 +2491,7 @@
             "mutability": "mutable",
             "name": "currentAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 51,
+            "scope": 55,
             "src": "132:29:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2569,7 +2609,7 @@
               "parameters": [],
               "src": "201:0:0"
             },
-            "scope": 51,
+            "scope": 55,
             "src": "164:78:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2673,7 +2713,7 @@
               "parameters": [],
               "src": "289:0:0"
             },
-            "scope": 51,
+            "scope": 55,
             "src": "244:82:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -3255,18 +3295,49 @@
               "parameters": [],
               "src": "356:0:0"
             },
-            "scope": 51,
+            "scope": 55,
             "src": "328:467:0",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 53,
+              "nodeType": "Block",
+              "src": "824:2:0",
+              "statements": []
+            },
+            "id": 54,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "804:2:0"
+            },
+            "returnParameters": {
+              "id": 52,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "824:0:0"
+            },
+            "scope": 55,
+            "src": "797:29:0",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 52,
-        "src": "103:695:0"
+        "scope": 56,
+        "src": "103:726:0"
       }
     ],
-    "src": "32:766:0"
+    "src": "32:797:0"
   },
   "compiler": {
     "name": "solc",
@@ -3274,7 +3345,8 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-04-14T21:16:48.661Z",
+  "updatedAt": "2022-04-15T15:00:40.178Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
