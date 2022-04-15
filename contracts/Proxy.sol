@@ -33,4 +33,6 @@ fallback() payable external {
     }
 }
 
+receive() payable external {}
+
 }
